@@ -30,7 +30,7 @@ fetch(url)
                     if (card['Image']) {
                         image.src = card['Image']
                     } else {
-                        image.src = 'https://upload.wikimedia.org/wikipedia/commons/3/30/Kpflogo.jpeg'
+                        image.src = 'https://d1embwjxo27ph2.cloudfront.net/actions/nmcImages/image/generateImage?v=5&anchor=top&height=450&width=800&path=%2FRobinson_Hero_1.jpg'
                     }
 
                     let link = createNode('a', 'link')
