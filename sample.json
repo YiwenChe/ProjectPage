@@ -26,7 +26,7 @@
          {
             "Title":"Important",
             "Image": null,
-            "Link":"www.google.com",
+            "Link":"www.youtube.com",
             "Description":"important message",
             "Type":"Warning"
          }
@@ -38,7 +38,7 @@
          {
             "Title":"Wiki",
             "Image": "https:\/\/wsfiles.kpf.com\/pr\/lg\/2635-2-000.jpg",
-            "Link":"www.google.com",
+            "Link":"www.notion.so",
             "Description":"Project Wiki",
             "Type":"Main Card"
          },
