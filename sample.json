@@ -52,7 +52,7 @@
          {
             "Title":"Project Info",
             "Image": null,
-            "Link":"www.google.com",
+            "Link":"https://www.google.com",
             "Description":"text message",
             "Type":"Text Card"
          },

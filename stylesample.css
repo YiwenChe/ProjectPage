@@ -1,0 +1,399 @@
+/* ---------------------- */
+/* Design of the launcher */
+/* ---------------------- */
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-button {
+	width: 4px;
+	height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #adadad;
+	border: 0px solid #ffffff;
+	border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #909090;
+}
+
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+::-webkit-scrollbar-track:hover {
+	background: none;
+}
+
+::-webkit-scrollbar-track:active {
+	background: none;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+	margin: 0;
+	padding: 0;
+	font-family: Calibri;
+  background-repeat: no-repeat;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+  height: 100%;
+	width: 100%;
+}
+
+h1 {
+  max-width: calc(100% - 35px);
+  color: white;
+  font-weight: 100;
+  font-size: 18pt;
+  font-family: Calibri;
+}
+
+a {
+	text-decoration: none;
+  cursor: pointer;
+}
+
+.windowResize, .ui-icon, .ui-widget-content .ui-icon {
+  background-image: url('https://i48.servimg.com/u/f48/18/06/99/75/img_re10.png');
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  cursor: nw-resize;
+  z-index: 10;
+}
+
+.windowResize:active {
+  cursor: nwse-resize;
+}
+
+#mainForm {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  background-size: 90%;
+  background-position: right -20px;
+  //background-color: #242328;
+  //background-image: url('https://i48.servimg.com/u/f48/18/06/99/75/backsh11.jpg');
+  background-repeat: no-repeat;
+  min-width: 800px;
+  min-height: 560px;
+}
+.windowDecoration {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.corner1 {
+  height: 100%;
+  width: 9px;
+  background-image: url('https://i48.servimg.com/u/f48/18/06/99/75/corner11.png');
+}
+
+.corner2 {
+  height: 100%;
+  width: 16px;
+  background-image: url('https://i48.servimg.com/u/f48/18/06/99/75/corner10.png');
+}
+
+.elm1 {
+  background-color: rgba(255, 255, 255, 0.10196078431372549);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10196078431372549);
+  height: calc(100% - 1px);
+  max-width: 87%;
+  min-width: 72%;
+}
+
+.mainPanel {
+  position: fixed;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 4;
+}
+
+
+.controlGame {
+  background-color: #00000080;
+  height: 30px;
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  display: flex;
+  box-sizing: content-box;
+  flex-direction: row;
+  border-radius: 3px;
+  background-image: url('https://i48.servimg.com/u/f48/18/06/99/75/arrow_11.png');
+  background-position: 80px 11px;
+}
+
+.elmCtrl {
+  height: 100%;
+  color: white;
+  padding: 5px;
+  font-size: 10pt;
+  padding-top: 7px;
+}
+
+.elmCtrolItm1 {
+  width: 20%;
+  padding-left: 30px;
+  padding-right: 25px;
+  background-image: url('https://i48.servimg.com/u/f48/18/06/99/75/icon_m10.png');
+  background-position: 10px 7px;
+}
+
+
+.swipPanel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  padding-top: 55px;
+  padding-left: 25px;
+  overflow: hidden;
+  min-height: 280.8px;
+}
+
+.swipForm {
+  height: 270px;
+  min-height: 270px;
+  max-height: 270px;
+  background-color: #172028;
+  margin-right: 20px;
+  border: 1px solid black;
+  box-shadow: 0 0 13px 5px #0000007d;
+}
+
+.mainSwip {
+  width: 480px;
+  min-width: 480px;
+  max-width: 480px;
+}
+
+.secondSwip {
+  width: 230px;
+  min-width: 230px;
+  max-width: 230px;
+}
+
+.contentSwip {
+  box-shadow: inset 0 0 0px 1px #ffffff2e;
+  height: calc(100% - 1px);
+  width: 100%;
+  box-sizing: content-box;
+  padding-top: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.promoWOW {
+  background-image: url('https://i48.servimg.com/u/f48/18/06/99/75/promow10.png');
+  background-size: cover;
+  background-position: center;
+}
+
+video.VideoPane-video {
+  height: 268px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+.bottomPanel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  top: 40px;
+  padding-top: 300px;
+  padding-left: 25px;
+  overflow: hidden;
+  min-height: 280.8px;
+}
+
+.infoSwip {
+  background-color: #341703;
+}
+
+.headerInfoSwip {
+  width: calc(100% - 52px);
+  height: 35px;
+  background-color: #562602;
+  margin: 1px;
+  margin-top: 0;
+  border-bottom: 1px solid #ffffff14;
+  background-image: url('https://i48.servimg.com/u/f48/18/06/99/75/icon_b10.png');
+  background-position: 10px 8px;
+  padding-left: 50px;
+  padding-top: 15px;
+  color: white;
+  font-weight: lighter;
+}
+
+.contentInfo {
+  padding: 15px;
+  color: #A3A3A6;
+  font-size: 11pt;
+  overflow: scroll;
+  height: calc(100% - 90px);
+  width: calc(100% - 35px);
+  text-align: justify;
+  word-break: break-all;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+
+.contentMS {
+  width: 100%;
+  background-image: url('https://i48.servimg.com/u/f48/18/06/99/75/ufbnzv10.jpg');
+  background-size: cover;
+}
+
+/* --------------- */
+/* Loading Spinner */
+/* --------------- */
+
+#loading {
+    display: block;
+    box-sizing: content-box;
+    position: absolute;
+    top: 50%;
+}
+
+.loadCircle {
+  width: 32px;
+  height: 32px;
+  animation-name: loadingBNET1;
+}
+
+.loadCircle, .loadingBNET::before, .loadingBNET::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  perspective: 600px;
+  border-top-width: 4px;
+  border-left-width: 2px;
+  border-top-color: #04AFFF;
+  border-left-color: #04AFFF;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  animation-duration: 700ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.loadingBNET::before {
+  animation-name: loadingBNET2;
+}
+
+.loadingBNET::after {
+  animation-name: loadingBNET3;
+}
+
+@keyframes loadingBNET1 {
+  0% {
+    transform: rotateX(65deg) rotateZ(45deg);
+  }
+  100% {
+    transform: rotateX(65deg) rotateZ(405deg);
+  }
+}
+
+@keyframes loadingBNET2 {
+  0% {
+    transform: rotateX(-45deg) rotateY(45deg) rotateZ(180deg);
+  }
+  100% {
+    transform: rotateX(-45deg) rotateY(45deg) rotateZ(540deg);
+  }
+}
+
+@keyframes loadingBNET3 {
+  0% {
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(270deg);
+  }
+  100% {
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(630deg);
+  }
+}
+
+/* -------------------- */
+/* Adaptation à l'écran */
+/* -------------------- */
+
+@media screen and (max-height: 720px) {
+  .gameLogo {
+    display: none;
+  }
+  .controlGame {
+    top: 10px;
+  }
+  .swipPanel {
+    top: 0px;
+  }
+}
+
+/* -------------------- */
+/* -------- FIN ------- */
+/* -------------------- */

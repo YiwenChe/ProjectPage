@@ -1,0 +1,25 @@
+:root {
+    --color-dark: #222;
+    --color-light: #eee;
+  }
+
+* {
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+body {
+    margin: 0
+}
+
+#container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+

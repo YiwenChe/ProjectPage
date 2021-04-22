@@ -17,7 +17,7 @@ function append(parent, el) {
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        // console.log(data)
         data.forEach(project => {
             if (project["Id"] === targetProject_id) {
                 project["Cards"].map(card => {
@@ -27,21 +27,24 @@ fetch(url)
                     title.innerHTML = card['Title']
 
                     let image = createNode('img', 'image')
-                    image.src = card['Image']
+                    if (card['Image']) {
+                        image.src = card['Image']
+                    } else {
+                        image.src = 'https://upload.wikimedia.org/wikipedia/commons/3/30/Kpflogo.jpeg'
+                    }
 
                     let link = createNode('a', 'link')
                     link.href = card['Link']
 
                     let des = createNode('p', 'des')
+                    des.innerHTML = card['Description']
 
+                    append(link, image)
+                    append(link, title)
+                    append(link, des)
                     append(cardWrapper, link)
-                    // append(link, title)
-                    // append(link, image)
-                    // append(link, link)
-                    // append(link, des)
 
-
-                    console.log(cardWrapper)
+                    append(container, cardWrapper)
                 })
             }
         })
