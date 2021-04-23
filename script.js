@@ -3,6 +3,7 @@ const container = document.getElementById('container')
 const targetProject_id = "2635-2-000"
 const url = "https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json"
 
+// functions
 function createNode(element, classname) {
     const newNode = document.createElement(element)
     newNode.classList.add(classname)
@@ -22,6 +23,7 @@ fetch(url)
             if (project["Id"] === targetProject_id) {
                 project["Cards"].map(card => {
                     let cardWrapper = createNode('div', 'cardWrapper')
+                    cardWrapper.classList.add(card['Type'].split(' ')[0])
 
                     let title = createNode('h3', 'title')
                     title.innerHTML = card['Title']

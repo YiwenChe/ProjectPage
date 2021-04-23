@@ -14,27 +14,38 @@ a {
     text-decoration: none;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 
 /* component format */
 body {
     margin: 0;
     background-color: var(--color-background);
+
+    /* -ms-overflow-style: none;  
+    scrollbar-width: none;   */
 }
 
 #container {
-    width: 96%;
-    margin: 10vh auto;
+    width: 98%;
+    margin: 10px auto;
+
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .cardWrapper {
-    width: 22vw;
-    margin: 1em;
+    width: 18em;
+    height: 18em;
+    margin: 0.5em;
 
     display: flex;
     flex-direction: column;
-    flex-basis: auto;
+    flex-grow: 1;
 
     border: var(--color-border) 3px solid;
     border-radius: 15px;
@@ -42,17 +53,22 @@ body {
 
 .image {
     width: 100%;
-    height: 20vh;
+    height: 11em;
     object-fit: cover;
 
-    border-radius: 15px 15px 0 0;
+    border-radius: 12px 12px 0 0;
 }
 
 .title, .des {
-    margin-top: 0.5em;
+    margin-top: 1em;
     padding-left: 1em;
 }
 
 .des {
     color: #eeeeee90;
+}
+
+/* tiles */
+.Main {
+    flex-grow: 2;
 }
