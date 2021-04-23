@@ -23,7 +23,7 @@ a {
 /* component format */
 body {
     margin: 0;
-    background-color: var(--color-background);
+    background-color: #00000000;
 
     /* -ms-overflow-style: none;  
     scrollbar-width: none;   */
