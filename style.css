@@ -7,7 +7,7 @@
 * {
     font-family: "Open Sans",Helvetica,Arial,sans-serif;
     color: var(--color-light);
-    box-sizing: border-box;
+    box-sizing:content-box;
 }
 
 a {
@@ -70,11 +70,29 @@ body {
 }
 
 /* tiles */
+
+/* main */
 .Main {
     width: 36em;
     flex-grow: 2;
 }
 
+.Main a {
+    display: flex;
+}
+
+.Main a .image {
+    width: 50%;
+    height: 18em;
+    border-radius: 12px 0 0 12px;
+}
+
+.Main .text {
+    padding-left: 2.5%;
+    width: 50%;
+}
+
+/* waining */
 .Warning {
     border: orange 3px solid;
 }

@@ -34,8 +34,8 @@ function loadPage() {
                         let cardWrapper = createNode('div', 'cardWrapper')
                         cardWrapper.classList.add(card['Type'].split(' ')[0])
 
-                        let title = createNode('h3', 'title')
-                        title.innerHTML = card['Title']
+                        let link = createNode('a', 'link')
+                        link.href = card['Link']
 
                         let image = createNode('img', 'image')
                         if (card['Image']) {
@@ -44,17 +44,18 @@ function loadPage() {
                             image.src = 'https://d1embwjxo27ph2.cloudfront.net/actions/nmcImages/image/generateImage?v=5&anchor=top&height=450&width=800&path=%2FRobinson_Hero_1.jpg'
                         }
 
-                        let link = createNode('a', 'link')
-                        link.href = card['Link']
+                        let text = createNode('div', 'text')
+                        let title = createNode('h3', 'title')
+                        title.innerHTML = card['Title']
 
                         let des = createNode('p', 'des')
                         des.innerHTML = card['Description']
 
+                        append(text, title)
+                        append(text, des)
                         append(link, image)
-                        append(link, title)
-                        append(link, des)
+                        append(link, text)
                         append(cardWrapper, link)
-
                         append(container, cardWrapper)
                     })
                 }
