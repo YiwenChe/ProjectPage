@@ -68,3 +68,5 @@ function loadPage() {
 setProjectId('2677-1-000')
 setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
 loadPage()
+
+export { setProjectId, setUrl, loadPage }
