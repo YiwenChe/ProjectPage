@@ -62,7 +62,7 @@ body {
 
 .title, .des {
     margin-top: 1em;
-    padding-left: 1em;
+    padding-left: 5%;
 }
 
 .des {
@@ -71,5 +71,22 @@ body {
 
 /* tiles */
 .Main {
+    width: 36em;
     flex-grow: 2;
+}
+
+.Warning {
+    border: orange 3px solid;
+}
+
+.Warning .image {
+    display: none;
+}
+
+.Warning .title {
+    color: orange;
+}
+
+.Text .image{
+    display: none;
 }
