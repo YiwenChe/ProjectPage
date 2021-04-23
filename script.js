@@ -1,9 +1,14 @@
 // variables
 const container = document.getElementById('container')
-const targetProject_id = "2635-2-000"
+let targetProject_id = "2677-1-000"
 const url = "https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json"
 
+
 // functions
+function getProjectId(id) {
+    return 
+}
+
 function createNode(element, classname) {
     const newNode = document.createElement(element)
     newNode.classList.add(classname)
