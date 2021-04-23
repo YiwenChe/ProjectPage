@@ -47,7 +47,7 @@ body {
     flex-direction: column;
     flex-grow: 1;
 
-    background-color: var(--color-background);
+    background-color: #172028;
     border: var(--color-border) 3px solid;
     border-radius: 15px;
 }
