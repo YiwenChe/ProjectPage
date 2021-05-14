@@ -103,7 +103,7 @@ body {
 
 /* waining */
 .Warning {
-    border: orange 3px solid;
+    border: #a1be46 3px solid;
 }
 
 .Warning .image {
@@ -111,7 +111,7 @@ body {
 }
 
 .Warning .title {
-    color: orange;
+    color: #a1be46;
 }
 
 .Text .image{
