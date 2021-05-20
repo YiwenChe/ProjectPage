@@ -68,7 +68,7 @@ body {
     border-radius: 12px 12px 0 0;
 }
 
-.text {
+.TEXT {
     margin-top: 0.5em;
     padding-left: 5%;
 }
@@ -81,39 +81,46 @@ body {
 /* tiles */
 
 /* main */
-.Main {
+.MAIN {
     width: 24em;
     flex-grow: 2;
 }
 
-.Main a {
+.MAIN a {
     display: flex;
 }
 
-.Main a .image {
+.MAIN a .image {
     width: 70%;
     height: 14em;
     border-radius: 12px 0 0 12px;
 }
 
-.Main .text {
+.MAIN .TEXT {
     padding-left: 2.5%;
     width: 50%;
 }
 
 /* waining */
-.Warning {
+.WARNING {
     border: #a1be46 3px solid;
 }
 
-.Warning .image {
+.WARNING .image {
     display: none;
 }
 
-.Warning .title {
+.WARNING .title {
     color: #a1be46;
 }
 
-.Text .image{
+.TEXT .image{
     display: none;
+}
+
+/* splash */
+.SPLASH {
+    height: 42em;
+    width: 100%;
+    order: 1;
 }

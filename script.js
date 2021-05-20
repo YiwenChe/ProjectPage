@@ -30,7 +30,7 @@ function loadPage() {
                 if (project["Id"] === targetProject_id) {
                     project["Cards"].map(card => {
                         let cardWrapper = createNode('div', 'cardWrapper')
-                        cardWrapper.classList.add(card['Type'].split(' ')[0])
+                        cardWrapper.classList.add(card['Type'].split(' ')[0].toUpperCase())
 
                         let link = createNode('a', 'link')
                         link.href = card['Link']
