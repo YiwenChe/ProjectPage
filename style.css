@@ -130,7 +130,6 @@ body {
 }
 
 .SPLASH .image {
-    height: 70%;
-    width: 100%;
+    width: auto;
     object-fit: cover;
 }
