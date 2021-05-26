@@ -124,3 +124,9 @@ body {
     width: 100%;
     order: 1;
 }
+
+.SPLASH .image {
+    height: 85%;
+    width: 100%;
+    object-fit: cover;
+}
