@@ -125,6 +125,10 @@ body {
     order: 1;
 }
 
+.SPLASH .text {
+    padding: 2.5%
+}
+
 .SPLASH .image {
     height: 70%;
     width: 100%;
