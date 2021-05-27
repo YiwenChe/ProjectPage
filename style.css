@@ -68,7 +68,7 @@ body {
     border-radius: 12px 12px 0 0;
 }
 
-.TEXT {
+.text {
     margin-top: 0.5em;
     padding-left: 5%;
 }
@@ -96,7 +96,7 @@ body {
     border-radius: 12px 0 0 12px;
 }
 
-.MAIN .TEXT {
+.MAIN .text {
     padding-left: 2.5%;
     width: 50%;
 }
@@ -114,6 +114,7 @@ body {
     color: #a1be46;
 }
 
+/* text */
 .TEXT .image{
     display: none;
 }
@@ -126,7 +127,7 @@ body {
 }
 
 .SPLASH .text {
-    padding-left: 2.5%
+    padding-left: 2.5%;
 }
 
 .SPLASH .image {
