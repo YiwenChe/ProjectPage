@@ -29,6 +29,13 @@
             "Link":"www.youtube.com",
             "Description":"important message",
             "Type":"Warning"
+         },
+         {
+            "Title":"Splash Sample",
+            "Image": "https:\/\/wsfiles.kpf.com\/pr\/lg\/2635-2-000.jpg",
+            "Link":"https://www.youtube.com/",
+            "Description":"important message",
+            "Type":"Splash"
          }
       ]
    },
