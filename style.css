@@ -70,7 +70,7 @@ body {
 
 .text {
     margin-top: 0.5em;
-    padding-left: 5%;
+    padding: auto 5%;
 }
 
 .des {
@@ -97,7 +97,7 @@ body {
 }
 
 .MAIN .text {
-    padding-left: 2.5%;
+    padding: auto 2.5%;
     width: 50%;
 }
 
@@ -127,7 +127,7 @@ body {
 }
 
 .SPLASH .text {
-    padding-left: 2.5%;
+    padding: auto 2.5%;
 }
 
 .SPLASH .image {
