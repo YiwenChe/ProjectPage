@@ -22,7 +22,7 @@ function append(parent, el) {
 }
 function navigate(card){
 
-    //alert(card['Link'])
+    alert(card['Link'])
     //window.location.href = "http://www.google.com";
     if (card["NewPage"] === true) {
         let url = "http://localhost:2333/open_default_browser";
