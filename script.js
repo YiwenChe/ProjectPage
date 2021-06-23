@@ -22,25 +22,40 @@ function append(parent, el) {
 }
 function navigate(card){
 
-    alert(card['Link'])
+
     //window.location.href = "http://www.google.com";
     if (card["NewPage"] === true) {
         let url = "http://localhost:2333/open_default_browser";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", url);
+        //var xhr = new XMLHttpRequest();
+        //xhr.open("POST", url);
 
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.setRequestHeader("Content-Type", "application/json");
+        //xhr.setRequestHeader("Accept", "application/json");
+        //xhr.setRequestHeader("Content-Type", "application/json");
 
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                console.log(xhr.status);
-                console.log(xhr.responseText);
-            }};
+        //xhr.onreadystatechange = function () {
+        //    if (xhr.readyState === 4) {
+        //        console.log(xhr.status);
+        //        console.log(xhr.responseText);
+        //   }};
+        //alert(url + card["Link"])
+        //var data = `{"Text": ${card["Link"]} + }`;
 
-        var data = `{"Text": ${url} + }`;
+        //xhr.send(data);
+        $.ajax
+        ({
+            type: "POST",
+            //the url where you want to sent the userName and password to
+            url: "http://localhost:2333/open_default_browser",
+            dataType: "jsonp",
+            async: false,
+            contentType: 'application/json',
+            //json object to sent to the authentication url
+            data: JSON.stringify({"Text ":card['Link']}),
+            success: function () {
 
-        xhr.send(data);
+                alert("Thanks!");
+            }
+        })
     }
     else{
         if(card['Link']!= null){
