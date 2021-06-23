@@ -22,7 +22,7 @@ function append(parent, el) {
 }
 function navigate(card){
 
-    //alert("test 2")
+    //alert(card['Link'])
     //window.location.href = "http://www.google.com";
     if (card["NewPage"] === true) {
         let url = "http://localhost:2333/open_default_browser";
@@ -94,7 +94,7 @@ function loadPage() {
 
 
 // execution
-setProjectId('2677-1-000')
-setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
-loadPage()
+//setProjectId('2677-1-000')
+//setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
+//loadPage()
 
