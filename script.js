@@ -60,8 +60,9 @@ function loadPage() {
                         let cardWrapper = createNode('div', 'cardWrapper')
                         cardWrapper.classList.add(card['Type'].split(' ')[0].toUpperCase())
 
-                        $('a').click( function(e) {e.preventDefault(); navigate(card); return false; } );
+
                         let link = createNode('a', 'link')
+                        $(link).click( function(e) {e.preventDefault(); navigate(card); return false; });
                         link.href = card['Link']
 
                         let image = createNode('img', 'image')
@@ -94,7 +95,7 @@ function loadPage() {
 
 
 // execution
-//setProjectId('2677-1-000')
-//setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
-//loadPage()
+setProjectId('2677-1-000')
+setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
+loadPage()
 
