@@ -20,7 +20,35 @@ function createNode(element, classname) {
 function append(parent, el) {
     return parent.appendChild(el)
 }
+function navigate(card){
 
+    //alert("test 2")
+    //window.location.href = "http://www.google.com";
+    if (card["NewPage"] === true) {
+        let url = "http://localhost:2333/open_default_browser";
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", url);
+
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                console.log(xhr.status);
+                console.log(xhr.responseText);
+            }};
+
+        var data = `{"Text": ${url} + }`;
+
+        xhr.send(data);
+    }
+    else{
+        if(card['Link']!= null){
+            window.location.href = card['Link'];
+        }
+    }
+
+}
 function loadPage() {
     fetch(targetUrl)
         .then(response => response.json())
@@ -32,6 +60,7 @@ function loadPage() {
                         let cardWrapper = createNode('div', 'cardWrapper')
                         cardWrapper.classList.add(card['Type'].split(' ')[0].toUpperCase())
 
+                        $('a').click( function(e) {e.preventDefault(); navigate(card); return false; } );
                         let link = createNode('a', 'link')
                         link.href = card['Link']
 
@@ -49,6 +78,7 @@ function loadPage() {
                         let des = createNode('p', 'des')
                         des.innerHTML = card['Description']
 
+
                         append(text, title)
                         append(text, des)
                         append(link, image)
@@ -64,7 +94,7 @@ function loadPage() {
 
 
 // execution
-// setProjectId('2677-1-000')
-// setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
-// loadPage()
+setProjectId('2677-1-000')
+setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
+loadPage()
 
