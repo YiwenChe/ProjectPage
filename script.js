@@ -21,39 +21,29 @@ function append(parent, el) {
     return parent.appendChild(el)
 }
 function navigate(card){
-
+    const params = {
+        target_url: card['Link']
+    };
+    let qs = Object.keys(params)
+        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+        .join('&');
+    let result_url = 'http://localhost:2333/open_default_browser?' + qs
 
     //window.location.href = "http://www.google.com";
     if (card["NewPage"] === true) {
-        let url = "http://localhost:2333/open_default_browser";
-        //var xhr = new XMLHttpRequest();
-        //xhr.open("POST", url);
-
-        //xhr.setRequestHeader("Accept", "application/json");
-        //xhr.setRequestHeader("Content-Type", "application/json");
-
-        //xhr.onreadystatechange = function () {
-        //    if (xhr.readyState === 4) {
-        //        console.log(xhr.status);
-        //        console.log(xhr.responseText);
-        //   }};
-        //alert(url + card["Link"])
-        //var data = `{"Text": ${card["Link"]} + }`;
-
-        //xhr.send(data);
         $.ajax
         ({
-            type: "POST",
+            type: "GET",
+            //headers: {'Access-Control-Allow-Origin': '*'},
+            url:result_url,
             //the url where you want to sent the userName and password to
-            url: "http://localhost:2333/open_default_browser",
-            dataType: "jsonp",
+            //dataType: "jsonp",
+            crossDomain: true,
             async: false,
-            contentType: 'application/json',
+            //contentType: 'application/json',
             //json object to sent to the authentication url
-            data: JSON.stringify({"Text ":card['Link']}),
+            //data: JSON.stringify({"Text":card['Link']}),
             success: function () {
-
-                alert("Thanks!");
             }
         })
     }
@@ -110,7 +100,7 @@ function loadPage() {
 
 
 // execution
-//setProjectId('2677-1-000')
-//setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
-//loadPage()
+setProjectId('2677-1-000')
+setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
+loadPage()
 
