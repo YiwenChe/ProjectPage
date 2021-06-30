@@ -34,15 +34,9 @@ function navigate(card){
         $.ajax
         ({
             type: "GET",
-            //headers: {'Access-Control-Allow-Origin': '*'},
             url:result_url,
-            //the url where you want to sent the userName and password to
-            //dataType: "jsonp",
             crossDomain: true,
             async: false,
-            //contentType: 'application/json',
-            //json object to sent to the authentication url
-            //data: JSON.stringify({"Text":card['Link']}),
             success: function () {
             }
         })
@@ -64,8 +58,6 @@ function loadPage() {
                     project["Cards"].map(card => {
                         let cardWrapper = createNode('div', 'cardWrapper')
                         cardWrapper.classList.add(card['Type'].split(' ')[0].toUpperCase())
-
-
                         let link = createNode('a', 'link')
                         $(link).click( function(e) {e.preventDefault(); navigate(card); return false; });
                         link.href = card['Link']
