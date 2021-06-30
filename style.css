@@ -1,7 +1,7 @@
 :root {
     --color-background: #172028;
     --color-border: #000;
-    --color-light: #eee;
+    --color-light: #eeeeee90
 }
 
 * {
@@ -63,8 +63,8 @@ body {
     background-color: #31333a;
     border-color: #e9088b;
 }
-.cardWrapper:hover .text {
-    margin-top: var(--margin-top)-0.25em
+.cardWrapper:hover .text .des{
+    color: #eee;
 }
 .image {
     width: 100%;
