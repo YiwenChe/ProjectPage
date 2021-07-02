@@ -20,7 +20,7 @@
             "Title":"Project Info",
             "Image": null,
             "Link":"https://www.wsj.com",
-            "Description":"test new behavior",
+            "Description":"Revit 2021.1.3 Hotfix patch notes.\r\nTest multiline behavior",
             "Type":"Text Card",
             "NewPage":true
          },
