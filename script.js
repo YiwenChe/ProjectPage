@@ -46,7 +46,12 @@ function navigate(card){
             window.location.href = card['Link'];
         }
     }
-
+}
+function mouseTrackerFunction(e, element) {
+    var x = e.clientX;
+    var y = e.clientY;
+    element.style.left = x + 5+ "px";
+    element.style.top = y + 5 + "px";
 }
 function loadPage() {
     fetch(targetUrl)
@@ -59,8 +64,15 @@ function loadPage() {
                         let cardWrapper = createNode('div', 'cardWrapper')
                         cardWrapper.classList.add(card['Type'].split(' ')[0].toUpperCase())
                         let link = createNode('a', 'link')
-                        $(link).click( function(e) {e.preventDefault(); navigate(card); return false; });
+                        $(link).click(function(e) {e.preventDefault(); navigate(card); return false; });
                         link.href = card['Link']
+
+
+                        let tooltip = createNode('span', 'tooltiptext')
+                        tooltip.innerHTML = card['Link']
+                        tooltip.Id = "tooltip"
+
+                        cardWrapper.addEventListener('mousemove', function(event){mouseTrackerFunction(event, tooltip)})
 
                         let image = createNode('img', 'image')
                         if (card['Image']) {
@@ -82,12 +94,15 @@ function loadPage() {
                         append(link, image)
                         append(link, text)
                         append(cardWrapper, link)
+                        append(cardWrapper, tooltip)
                         append(container, cardWrapper)
                     })
                 }
             })
         })
+
     }
+
 
 
 
