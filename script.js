@@ -17,26 +17,20 @@ function createNode(element, classname) {
     return newNode
 }
 
-function setCardWidth(type, cardWrapper) {
+function setCardWidth(type) {
     switch (type){
         case "Main".toUpperCase():
-            cardWrapper.flexGrow = 0.5
-            break;
+            return 0.5
         case "Typical".toUpperCase():
-            cardWrapper.flexGrow = 0.5
-            break;
+            return 0.3
         case "Text".toUpperCase():
-            cardWrapper.flexGrow = 0.3
-            break;
+            return 0.3
         case "Warning".toUpperCase():
-            cardWrapper.flexGrow = 0.3
-            break;
+            return 0.3
         case "Splash".toUpperCase():
-            cardWrapper.flexGrow = 1
-            break;
+            return 1
         default:
-            cardWrapper.flexGrow = 0.5
-            break;
+            return 0.5
     }
 }
 
@@ -96,7 +90,7 @@ function loadPage() {
                         tooltip.Id = "tooltip"
 
                         cardWrapper.addEventListener('mousemove', function(event){mouseTrackerFunction(event, tooltip)})
-                        setCardWidth(card['Type'].split(' ')[0].toUpperCase(), cardWrapper)
+                        cardWrapper.flexGrow = setCardWidth(card['Type'].split(' ')[0].toUpperCase())
                         // cardWrapper.flexGrow = 0.5
 
                         let image = createNode('img', 'image')

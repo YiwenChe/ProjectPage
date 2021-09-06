@@ -48,13 +48,15 @@ body {
 }
 
 .cardWrapper {
-    width: 14em;
+    width: 16em;
     height: 14em;
     margin: 0.5em;
 
     display: flex;
     flex-direction: column;
-    flex-grow: 0.5;
+    flex-grow: 0.15;
+    flex-shrink: 0.3;
+
 
     background-color: #23252b;
     border: var(--color-border) 3px solid;
