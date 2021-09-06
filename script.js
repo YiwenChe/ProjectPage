@@ -17,6 +17,29 @@ function createNode(element, classname) {
     return newNode
 }
 
+function setCardWidth(type, cardWrapper) {
+    switch (type){
+        case "Main".toUpperCase():
+            cardWrapper.flexGrow = 0.5
+            break;
+        case "Typical".toUpperCase():
+            cardWrapper.flexGrow = 0.5
+            break;
+        case "Text".toUpperCase():
+            cardWrapper.flexGrow = 0.3
+            break;
+        case "Warning".toUpperCase():
+            cardWrapper.flexGrow = 0.3
+            break;
+        case "Splash".toUpperCase():
+            cardWrapper.flexGrow = 1
+            break;
+        default:
+            cardWrapper.flexGrow = 0.5
+            break;
+    }
+}
+
 function append(parent, el) {
     return parent.appendChild(el)
 }
@@ -73,6 +96,8 @@ function loadPage() {
                         tooltip.Id = "tooltip"
 
                         cardWrapper.addEventListener('mousemove', function(event){mouseTrackerFunction(event, tooltip)})
+                        setCardWidth(card['Type'].split(' ')[0].toUpperCase(), cardWrapper)
+                        // cardWrapper.flexGrow = 0.5
 
                         let image = createNode('img', 'image')
                         if (card['Image']) {
@@ -107,7 +132,7 @@ function loadPage() {
 
 
 // execution
-//setProjectId('2677-1-000')
+//setProjectId('2635-2-000')
 //setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
 //loadPage()
 
