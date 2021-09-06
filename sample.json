@@ -63,6 +63,13 @@
             "Link":"https://www.youtube.com/",
             "Description":"important message",
             "Type":"Main Card"
+         },
+         {
+            "Title":"Teams",
+            "Image": "https:\/\/wsfiles.kpf.com\/pr\/lg\/2635-2-000.jpg",
+            "Link":"https://www.newyorker.com/",
+            "Description":"Project Teams Channel",
+            "Type":"Typical Card"
          }
       ]
    }
