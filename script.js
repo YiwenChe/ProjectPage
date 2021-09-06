@@ -126,7 +126,7 @@ function loadPage() {
 
 
 // execution
-setProjectId('2635-2-000')
-setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
-loadPage()
+//setProjectId('2635-2-000')
+//setUrl('https://raw.githubusercontent.com/YiwenChe/ProjectPage/main/sample.json')
+//loadPage()
 
