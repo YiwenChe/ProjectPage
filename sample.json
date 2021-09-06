@@ -7,7 +7,7 @@
             "Image": "https:\/\/wsfiles.kpf.com\/pr\/lg\/2677-1-000.jpg",
             "Link":"https://www.github.com",
             "Description":"Project Wiki",
-            "Type":"Main Card"
+            "Type":"Typical Card"
          },
          {
             "Title":"Teams",
@@ -29,15 +29,8 @@
             "Image": null,
             "Link":"www.youtube.com",
             "Description":"important message",
-            "Type":"Warning"
+            "Type":"Main Card"
          },
-         {
-            "Title":"Splash Sample",
-            "Image": "https:\/\/wsfiles.kpf.com\/pr\/lg\/2635-2-000.jpg",
-            "Link":"https://www.youtube.com/",
-            "Description":"important message",
-            "Type":"Splash"
-         }
       ]
    },
       {
@@ -69,14 +62,7 @@
             "Image": null,
             "Link":"https://www.youtube.com/",
             "Description":"important message",
-            "Type":"Warning"
-         },
-         {
-            "Title":"Splash",
-            "Image": "https:\/\/wsfiles.kpf.com\/pr\/lg\/2635-2-000.jpg",
-            "Link":"https://www.youtube.com/",
-            "Description":"important message",
-            "Type":"Splash"
+            "Type":"Main Card"
          }
       ]
    }
